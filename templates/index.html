@@ -1,18 +1,32 @@
 <html>
-<title>Home Page</title>
+
 <body>
-    <h1>Home Page Header</h1>
-    <p>Hello from Home Page</p>
+    <title>
+        <h1> Sample Machile Learning Deployment - Created by Rajkumar</h1>
+    </title>
+
+
+    <div class="login">
+        <h1>Predict House Price</h1>
+        <form action="{{url_for('predict')}}" method="post">
+            <input type="text" name="area" placeholder="Area" required="required" /><br><br>
+            <input type="text" name="bedroom" placeholder="Bedroom" required="required" /><br><br>
+            <input type="text" name="bathrooms" placeholder="Bathrooms" required="required" /><br><br>
+            <input type="text" name="stories" placeholder="Stories" required="required" /><br><br>
+            <input type="text" name="guestroom" placeholder="Guestroom" required="required" /><br><br>
+            <input type="text" name="basement" placeholder="Basement" required="required" /><br><br>
+            <input type="text" name="parking" placeholder="Parking" required="required" /><br><br>
+            <input type="text" name="areaperbedroom" placeholder="AreaPerBedRoom" required="required" /><br><br>
+            <input type="text" name="bbratio" placeholder="BBratio" required="required" /><br><br>
+            <button type="submit">Predict</button>
+        </form>
+
+    </div>
+
+    <br>
+    <br>
+    {{prediction_text}}
+
 </body>
-
-<form action="#" method="post">
-    <p>Form Fields</p>
-    <p><input type="text" name = "AreaOfHouse"></p>
-    <p><input type="submit" value='submit'></p>
-
-</form>
-<br>
-<br>
-{{placeholder_text}}
 
 </html>
